@@ -35,7 +35,7 @@ client_list = [
         "password": "0",
         "payment_history": "Excellent history, always on time with all payments.",
         "debts": {},
-        "consent_obtained": True,
+        "consent_obtained": False,
         "identity_confirmed": False
     },
     {
@@ -52,7 +52,7 @@ client_list = [
                 "status": "Overdue"
             }
         },
-        "consent_obtained": True,
+        "consent_obtained": False,
         "identity_confirmed": False
     },
     {
