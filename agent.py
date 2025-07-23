@@ -86,6 +86,7 @@ def process_agent_message(user_input, chat_history, current_client_data):
     if not current_client_data:
         if client:=client_by_doc_number.get(user_input):
             current_client_data = client
+            current_client_data["identity_confirmed"] = False
             agent_response = "Olá! Para que eu possa continuar te ajudando, preciso do seu consentimento explícito para prosseguir com este atendimento via chatbot. Por favor, digite SIM se você concorda em continuar."
         else:
             agent_response = "Não consegui identificar seu cadastro, tente inserir seu CPF novamente, que tal inserir um número de 1 a 5?"
