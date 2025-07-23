@@ -1,6 +1,8 @@
 import streamlit as st
 from langchain_core.messages import HumanMessage, AIMessage
-from agent import process_agent_message, get_first_message
+from agent import process_agent_message, get_first_message, set_llm
+
+set_llm(st.secrets['GOOGLE_API_KEY'])
 
 st.set_page_config(page_title="Assistente de Renegociação", page_icon="🤖")
 st.title("🤖 Renê do Banco Confiança")

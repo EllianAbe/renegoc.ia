@@ -1,11 +1,13 @@
 from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain_core.prompts import ChatPromptTemplate, MessagesPlaceholder
 from client_mock import client_by_doc_number
-import dotenv
 
-dotenv.load_dotenv()
+llm = None
 
-llm = ChatGoogleGenerativeAI(model="gemini-2.5-flash", temperature=0.4)
+def set_llm(key):
+    global llm
+
+    llm = ChatGoogleGenerativeAI(model="gemini-2.5-flash", temperature=0.4, google_api_key=key)
 
 bank_rules_text = """
 Regras de Negociação Banco Confiança:
