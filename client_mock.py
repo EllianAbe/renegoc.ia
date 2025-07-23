@@ -61,7 +61,7 @@ client_list = [
         "password": "0",
         "payment_history": "Perfect payment history, no debts.",
         "debts": {},
-        "consent_obtained": True,
+        "consent_obtained": False,
         "identity_confirmed": False
     },
     {
